@@ -8,7 +8,7 @@ export default function CTABanner() {
       style={{ background: 'linear-gradient(135deg, #5B21B6 0%, #7C3AED 50%, #A855F7 100%)' }}>
 
       {/* Floating shapes */}
-      {['⭐','🌈','🎈','🎨','🌸'].map((e, i) => (
+      {['⭐','🎈','🎨','🌸','🌟'].map((e, i) => (
         <motion.div key={i}
           className="absolute text-4xl opacity-20 pointer-events-none select-none"
           style={{ top: `${10 + i * 18}%`, left: i % 2 === 0 ? `${5 + i * 4}%` : undefined, right: i % 2 !== 0 ? `${5 + i * 3}%` : undefined }}

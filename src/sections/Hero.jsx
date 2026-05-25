@@ -4,7 +4,6 @@ import { FiArrowDown } from 'react-icons/fi';
 
 const shapes = [
   { emoji: '⭐', size: 'text-5xl', top: '12%', left: '8%',  delay: 0 },
-  { emoji: '🌈', size: 'text-4xl', top: '20%', right: '10%', delay: 0.5 },
   { emoji: '🎈', size: 'text-5xl', top: '65%', left: '5%',  delay: 1 },
   { emoji: '🌸', size: 'text-3xl', top: '75%', right: '8%', delay: 0.8 },
   { emoji: '🎨', size: 'text-4xl', top: '45%', right: '5%', delay: 0.3 },
