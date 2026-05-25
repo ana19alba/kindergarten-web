@@ -1,0 +1,17 @@
+export const services = [
+  { icon: '📖', title: 'Mësim i Hershëm',        desc: 'Kurrikul gjithëpërfshirëse e projektuar për mendjet e vogla', color: 'bg-red-50    border-red-200    text-red-500' },
+  { icon: '🗣️', title: 'Klasa Gjuhësore',         desc: 'Anglisht, Frëngjisht & Spanjisht për linguistët e vegjël', color: 'bg-orange-50 border-orange-200 text-orange-500' },
+  { icon: '🎵', title: 'Muzikë & Vallëzim',        desc: 'Ritëm, lëvizje dhe shprehje muzikore', color: 'bg-yellow-50 border-yellow-200 text-yellow-600' },
+  { icon: '🎨', title: 'Art & Kreativitet',        desc: 'Pikturë, skulpturë dhe shprehje krijuese', color: 'bg-green-50  border-green-200  text-green-500' },
+  { icon: '🌿', title: 'Aktivitete Jashtë',        desc: 'Shëtitje në natyrë, kopshtari dhe lojë jashtë', color: 'bg-teal-50   border-teal-200   text-teal-500' },
+  { icon: '🔬', title: 'Mësimi STEM',              desc: 'Shkencë, teknologji dhe eksperimente praktike', color: 'bg-blue-50   border-blue-200   text-blue-500' },
+  { icon: '📚', title: 'Koha e Leximit',           desc: 'Tregime, fonetikë dhe lexim i hershëm', color: 'bg-indigo-50 border-indigo-200 text-indigo-500' },
+  { icon: '🥗', title: 'Ushqime të Shëndetshme',  desc: 'Mëngjes dhe drekë të aprovuara nga nutricionisti', color: 'bg-purple-50 border-purple-200 text-purple-500' },
+  { icon: '🚌', title: 'Transport',                desc: 'Shërbim i sigurt autobuzi nga dera në derë', color: 'bg-pink-50   border-pink-200   text-pink-500' },
+  { icon: '🏥', title: 'Kujdes Mjekësor',          desc: 'Infermiere në kampus dhe monitorim shëndetësor', color: 'bg-rose-50   border-rose-200   text-rose-500' },
+  { icon: '📱', title: 'Komunikim me Prindërit',   desc: 'Njoftime ditore nëpërmjet aplikacionit dhe portalit', color: 'bg-amber-50  border-amber-200  text-amber-600' },
+  { icon: '🌙', title: 'Kujdestari Ditore',        desc: 'Kujdes i zgjatur nga mëngjesi i hershëm deri në mbrëmje', color: 'bg-lime-50   border-lime-200   text-lime-600' },
+  { icon: '💬', title: 'Mbështetje Psikologjike',  desc: 'Këshilltarë fëmijësh dhe mirëqenie emocionale', color: 'bg-sky-50    border-sky-200    text-sky-500' },
+  { icon: '🎉', title: 'Programe Pushimesh',        desc: 'Kampe festive të mbushura me argëtim dhe ngjarje', color: 'bg-violet-50 border-violet-200 text-violet-500' },
+  { icon: '🎂', title: 'Ditëlindje në Shkollë',    desc: 'Festa magjike të ditëlindjes në shkollë', color: 'bg-fuchsia-50 border-fuchsia-200 text-fuchsia-500' },
+];

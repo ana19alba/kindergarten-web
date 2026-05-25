@@ -1,0 +1,42 @@
+export const testimonials = [
+  {
+    id: 1,
+    name: 'Manjola Prifti',
+    role: 'Nëna e Emës, 4 vjeç',
+    image: 'https://randomuser.me/api/portraits/women/12.jpg',
+    rating: 5,
+    text: 'Akademia Yjet e Vegjël ka qenë një bekim i vërtetë për familjen tonë. Ema vjen çdo ditë në shtëpi me buzëqeshje të madhe dhe na tregon për aventurat e saj të mrekullueshme. Mësuesit janë jashtëzakonisht të kujdesshëm dhe profesionistë. Nuk mund të kishim zgjedhur vend më të mirë për edukimin e saj të hershëm!',
+  },
+  {
+    id: 2,
+    name: 'Arben Duka',
+    role: 'Babai i Lianit & Noahut, 3 & 5 vjeç',
+    image: 'https://randomuser.me/api/portraits/men/14.jpg',
+    rating: 5,
+    text: 'Të dy djemtë tanë kanë lulëzuar në Yjet e Vegjël. Metoda Montessori ka bërë një ndryshim të madh në besimin dhe pavarësinë e tyre. Komunikimi nga mësuesit nëpërmjet aplikacionit është i shkëlqyer — gjithmonë dimë çfarë mësojnë dhe bëjnë fëmijët tanë.',
+  },
+  {
+    id: 3,
+    name: 'Mirela Kaja',
+    role: 'Nëna e Sofisë, 3 vjeç',
+    image: 'https://randomuser.me/api/portraits/women/28.jpg',
+    rating: 5,
+    text: 'Që nga dita e parë, Sofia u dashurua me Yjet e Vegjël. Ambientet janë të bukura, të sigurta dhe stimuluese. Programi i ushqimeve të shëndetshme është fantastik — ajo ka zhvilluar zakone shumë të mira ushqimore. E rekomandoj me zemër këtë shkollë çdo prindi!',
+  },
+  {
+    id: 4,
+    name: 'Gjergji Mema',
+    role: 'Babai i Oliverit, 5 vjeç',
+    image: 'https://randomuser.me/api/portraits/men/22.jpg',
+    rating: 5,
+    text: 'Programi Para-Klasa e përgatiti Oliverin shkëlqyeshëm për shkollën fillore. Ai mund të lexojë, të numërojë dhe më e rëndësishmja — e do mësimin! Mësuesit vërtet kujdesen për progresin individual të çdo fëmije. Investimi më i mirë që kemi bërë për të ardhmen e djalit tonë.',
+  },
+  {
+    id: 5,
+    name: 'Rina Shehu',
+    role: 'Nëna e Anikës, 4 vjeç',
+    image: 'https://randomuser.me/api/portraits/women/36.jpg',
+    rating: 5,
+    text: 'Programi shumëgjuhësh në Yjet e Vegjël është i jashtëzakonshëm. Anika tani flet tre gjuhë! Klasa e artit dhe muzikës kanë nxjerrë kreativitetin e saj në mënyra që nuk i prisnim kurrë. Stafi i trajton të gjithë fëmijët si familje — me të vërtetë një shtëpi larg shtëpisë.',
+  },
+];
