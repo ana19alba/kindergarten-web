@@ -13,9 +13,46 @@ const contactInfo = [
 export default function Contact() {
   const [form, setForm]           = useState({ name:'', email:'', phone:'', subject:'', message:'' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading]     = useState(false);
+  const [error, setError]         = useState('');
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-  const handleSubmit = e => { e.preventDefault(); setSubmitted(true); };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '7846bf4a-c99b-4ac7-af64-1d683008578d',
+          subject: `📩 Mesazh i Ri nga Faqja — ${form.subject}`,
+          from_name: form.name,
+          email: form.email,
+          message: [
+            `👤 Emri: ${form.name}`,
+            `📧 Email: ${form.email}`,
+            `📞 Telefon: ${form.phone || '—'}`,
+            `📌 Subjekti: ${form.subject}`,
+            `💬 Mesazhi: ${form.message}`,
+          ].join('\n'),
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setForm({ name:'', email:'', phone:'', subject:'', message:'' });
+      } else {
+        setError('Ndodhi një gabim. Ju lutemi provoni sërish.');
+      }
+    } catch {
+      setError('Nuk mund të dërgohej mesazhi. Kontrolloni lidhjen e internetit.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <motion.div {...pageTransition}>
@@ -105,8 +142,14 @@ export default function Contact() {
                         placeholder="Shkruani mesazhin tuaj këtu..."
                         className="w-full px-4 py-3 rounded-2xl border-2 border-gray-200 focus:border-primary focus:outline-none text-dark text-sm transition-colors resize-none"/>
                     </div>
-                    <button type="submit" className="btn-primary w-full py-4 text-base">
-                      ✉️ Dërgo Mesazhin
+                    {error && (
+                      <p className="text-red-500 text-sm font-semibold text-center bg-red-50 px-4 py-3 rounded-2xl">
+                        ⚠️ {error}
+                      </p>
+                    )}
+                    <button type="submit" disabled={loading}
+                      className="btn-primary w-full py-4 text-base disabled:opacity-60 disabled:cursor-not-allowed">
+                      {loading ? '⏳ Duke dërguar...' : '✉️ Dërgo Mesazhin'}
                     </button>
                   </motion.form>
                 )}

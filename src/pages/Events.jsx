@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { pageTransition, staggerContainer, fadeUp } from '../animations/variants';
 import { events } from '../data/events';
 import SectionHeader from '../components/SectionHeader';
@@ -42,7 +43,8 @@ const newsItems = [
 ];
 
 export default function Events() {
-  const [filter, setFilter] = useState('Të Gjitha');
+  const [filter, setFilter]     = useState('Të Gjitha');
+  const [expanded, setExpanded] = useState(null);
   const tags = ['Të Gjitha', ...new Set(events.map(e => e.category))];
   const filtered = filter === 'Të Gjitha' ? events : events.filter(e => e.category === filter);
 
@@ -102,9 +104,9 @@ export default function Events() {
                     <FaMapMarkerAlt className="text-sunshine shrink-0" />
                     <span>Kampusi Yjet e Vegjël</span>
                   </div>
-                  <button className="mt-3 btn-primary text-sm py-2.5 w-full">
-                    Regjistro Interesin
-                  </button>
+                  <Link to="/enrollment" className="mt-3 btn-primary text-sm py-2.5 w-full text-center block">
+                    Regjistro Interesin →
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -120,7 +122,7 @@ export default function Events() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {newsItems.map((n, i) => (
               <motion.article key={i} variants={fadeUp} initial="hidden" whileInView="visible" viewport={{once:true}}
-                className={`p-6 rounded-3xl border-2 ${n.color} hover:shadow-card transition-all duration-300 cursor-pointer group`}>
+                className={`p-6 rounded-3xl border-2 ${n.color} hover:shadow-card transition-all duration-300`}>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-3xl">{n.emoji}</span>
                   <div>
@@ -128,9 +130,15 @@ export default function Events() {
                     <p className="text-gray-400 text-xs mt-0.5">{n.date}</p>
                   </div>
                 </div>
-                <h3 className="font-extrabold text-dark text-lg mb-2 group-hover:text-primary transition-colors">{n.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{n.excerpt}</p>
-                <span className="inline-block mt-4 text-primary font-bold text-sm hover:underline">Lexo Më Shumë →</span>
+                <h3 className="font-extrabold text-dark text-lg mb-2">{n.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">
+                  {expanded === i ? n.excerpt : `${n.excerpt.slice(0, 100)}...`}
+                </p>
+                <button
+                  onClick={() => setExpanded(expanded === i ? null : i)}
+                  className="inline-block mt-4 text-primary font-bold text-sm hover:underline focus:outline-none transition-colors">
+                  {expanded === i ? 'Mbyll ↑' : 'Lexo Më Shumë →'}
+                </button>
               </motion.article>
             ))}
           </div>

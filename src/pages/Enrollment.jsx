@@ -33,12 +33,51 @@ const faqs = [
 ];
 
 export default function Enrollment() {
-  const [openFaq, setOpenFaq] = useState(null);
+  const [openFaq, setOpenFaq]     = useState(null);
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading]     = useState(false);
+  const [error, setError]         = useState('');
   const [form, setForm] = useState({ parentName:'', email:'', phone:'', childName:'', dob:'', program:'', message:'' });
 
   const handleChange = e => setForm(f => ({ ...f, [e.target.name]: e.target.value }));
-  const handleSubmit = e => { e.preventDefault(); setSubmitted(true); };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          access_key: '7846bf4a-c99b-4ac7-af64-1d683008578d',
+          subject: `🎓 Regjistrim i Ri — ${form.childName}`,
+          from_name: form.parentName,
+          email: form.email,
+          message: [
+            `👨‍👩‍👧 Prindi/Kujdestari: ${form.parentName}`,
+            `📧 Email: ${form.email}`,
+            `📞 Telefon: ${form.phone}`,
+            `👶 Emri i Fëmijës: ${form.childName}`,
+            `🎂 Datëlindja: ${form.dob}`,
+            `📚 Programi i Zgjedhur: ${form.program}`,
+            `💬 Mesazh Shtesë: ${form.message || '—'}`,
+          ].join('\n'),
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setForm({ parentName:'', email:'', phone:'', childName:'', dob:'', program:'', message:'' });
+      } else {
+        setError('Ndodhi një gabim. Ju lutemi provoni sërish.');
+      }
+    } catch {
+      setError('Nuk mund të dërgohej aplikimi. Kontrolloni lidhjen e internetit.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <motion.div {...pageTransition}>
@@ -191,8 +230,14 @@ export default function Enrollment() {
                     Pajtohem me <span className="text-primary font-bold">Politikën e Privatësisë</span> të Akademisë Yjet e Vegjël dhe pranoj të kontaktohem për aplikimin tim.
                   </label>
                 </div>
-                <button type="submit" className="btn-primary w-full text-base py-4">
-                  🚀 Dërgo Aplikimin
+                {error && (
+                  <p className="text-red-500 text-sm font-semibold text-center bg-red-50 px-4 py-3 rounded-2xl">
+                    ⚠️ {error}
+                  </p>
+                )}
+                <button type="submit" disabled={loading}
+                  className="btn-primary w-full text-base py-4 disabled:opacity-60 disabled:cursor-not-allowed">
+                  {loading ? '⏳ Duke dërguar...' : '🚀 Dërgo Aplikimin'}
                 </button>
               </motion.form>
             )}
