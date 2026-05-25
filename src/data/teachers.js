@@ -37,7 +37,7 @@ export const teachers = [
     image: 'https://randomuser.me/api/portraits/women/68.jpg',
     speciality: 'Muzikë, Vallëzim & Lëvizje',
     emoji: '🎵',
-    color: 'from-orange-400 to-yellow-400',
+    color: 'from-amber-400 to-yellow-300',
   },
   {
     id: 5,

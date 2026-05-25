@@ -17,9 +17,9 @@ export const programs = [
     age: '1 – 2 vjet',
     schedule: 'Hën–Pre · 7:30 – 17:00',
     description: 'Nxitja e eksplorimit dhe zhvillimit të hershëm të gjuhës nëpërmjet aktiviteteve të lojës, muzikës dhe ndërveprimit social.',
-    color: 'bg-orange-100',
-    border: 'border-orange-300',
-    badge: 'bg-orange-500',
+    color: 'bg-sky-100',
+    border: 'border-sky-300',
+    badge: 'bg-sky-500',
   },
   {
     id: 3,

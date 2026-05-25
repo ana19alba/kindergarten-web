@@ -16,7 +16,7 @@ const shapes = [
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #FFF0E6 0%, #FFE4D6 30%, #E8F4FD 70%, #EDE9FE 100%)' }}>
+      style={{ background: 'linear-gradient(135deg, #EDE9FE 0%, #F5F3FF 35%, #E0E7FF 70%, #FAF5FF 100%)' }}>
 
       {/* Animated background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

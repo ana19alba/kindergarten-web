@@ -8,7 +8,7 @@ import { FaLinkedinIn, FaEnvelope, FaTwitter } from 'react-icons/fa';
 export default function Teachers() {
   return (
     <motion.div {...pageTransition}>
-      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#FFF0E6,#EDE9FE)' }}>
+      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#EDE9FE,#F5F3FF,#E0E7FF)' }}>
         <div className="container-max px-4 mx-auto">
           <span className="section-label">Ekipi Ynë</span>
           <h1 className="section-title mt-2 mb-4">Njihuni me Mësuesit Tanë <span className="text-primary">të Mrekullueshëm</span></h1>

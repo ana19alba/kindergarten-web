@@ -26,7 +26,7 @@ export default function About() {
     <motion.div {...pageTransition}>
       {/* Hero */}
       <section className="pt-32 pb-20 relative overflow-hidden"
-        style={{ background:'linear-gradient(135deg,#FFF0E6,#E8F4FD,#EDE9FE)' }}>
+        style={{ background:'linear-gradient(135deg,#EDE9FE,#F5F3FF,#E0E7FF)' }}>
         <div className="container-max px-4 md:px-8 mx-auto text-center">
           <motion.div variants={staggerContainer} initial="hidden" animate="visible">
             <motion.div variants={fadeUp}><span className="section-label">Historia Jonë</span></motion.div>

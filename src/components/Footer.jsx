@@ -22,7 +22,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-orange-400 rounded-2xl flex items-center justify-center text-xl">⭐</div>
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-violet-400 rounded-2xl flex items-center justify-center text-xl">⭐</div>
               <div>
                 <span className="font-extrabold text-lg block leading-none">Yjet e Vegjël</span>
                 <span className="text-xs text-primary font-semibold tracking-wider">Akademia</span>

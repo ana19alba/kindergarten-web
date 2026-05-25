@@ -5,15 +5,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary:   '#FF6B6B',
-        secondary: '#4ECDC4',
-        sunshine:  '#FFD93D',
-        mint:      '#6BCB77',
-        lavender:  '#A78BFA',
-        peach:     '#FFA07A',
-        sky:       '#48CAE4',
-        cream:     '#FFF8F0',
-        dark:      '#2D3748',
+        primary:   '#7C3AED',   /* violet kryesor */
+        secondary: '#EC4899',   /* rozë */
+        sunshine:  '#F59E0B',   /* amber/i verdhë */
+        mint:      '#10B981',   /* jeshile/teal */
+        lavender:  '#A855F7',   /* violet i lehtë */
+        peach:     '#FB7185',   /* rozë-kuq */
+        sky:       '#38BDF8',   /* qiellor */
+        cream:     '#F5F3FF',   /* lavander shumë i lehtë - background */
+        dark:      '#1E1B4B',   /* navy i errët violet */
       },
       fontFamily: {
         display: ['"Nunito"', 'sans-serif'],
@@ -24,9 +24,9 @@ export default {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        soft: '0 4px 24px rgba(0,0,0,0.08)',
-        card: '0 8px 32px rgba(0,0,0,0.10)',
-        glow: '0 0 32px rgba(255,107,107,0.25)',
+        soft: '0 4px 24px rgba(124,58,237,0.08)',
+        card: '0 8px 32px rgba(124,58,237,0.12)',
+        glow: '0 0 32px rgba(124,58,237,0.30)',
       },
     },
   },

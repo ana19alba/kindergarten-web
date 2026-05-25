@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer } from '../animations/variants';
 
 const stats = [
-  { value: 500, suffix: '+', label: 'Fëmijë të Lumtur',   emoji: '😊', color: 'from-primary to-orange-400' },
-  { value: 15,  suffix: '+', label: 'Vite Eksperiencë',   emoji: '🏆', color: 'from-secondary to-teal-400' },
-  { value: 40,  suffix: '+', label: 'Mësues Ekspertë',    emoji: '👩‍🏫', color: 'from-lavender to-purple-400' },
-  { value: 12,  suffix: '',  label: 'Çmime të Fituara',   emoji: '🥇', color: 'from-sunshine to-amber-400' },
+  { value: 500, suffix: '+', label: 'Fëmijë të Lumtur',   emoji: '😊', color: 'from-primary to-violet-400' },
+  { value: 15,  suffix: '+', label: 'Vite Eksperiencë',   emoji: '🏆', color: 'from-secondary to-fuchsia-400' },
+  { value: 40,  suffix: '+', label: 'Mësues Ekspertë',    emoji: '👩‍🏫', color: 'from-lavender to-purple-500' },
+  { value: 12,  suffix: '',  label: 'Çmime të Fituara',   emoji: '🥇', color: 'from-sky to-blue-400' },
 ];
 
 function Counter({ value, suffix }) {

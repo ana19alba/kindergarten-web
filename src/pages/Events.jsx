@@ -51,7 +51,7 @@ export default function Events() {
   return (
     <motion.div {...pageTransition}>
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#FFF0E6,#EDE9FE)' }}>
+      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#EDE9FE,#F5F3FF,#E0E7FF)' }}>
         <div className="container-max px-4 mx-auto">
           <span className="section-label">Ngjarjet & Lajmet</span>
           <h1 className="section-title mt-2 mb-4">Çfarë Po <span className="text-primary">Ndodh</span> në Yjet e Vegjël</h1>

@@ -3,7 +3,7 @@ import { staggerContainer, fadeUp } from '../animations/variants';
 import SectionHeader from '../components/SectionHeader';
 
 const activities = [
-  { time: '7:30',  emoji: '🌅', title: 'Mirëseardhja e Mëngjesit', desc: 'Përshëndetje, pranim, rreth mëngjesi dhe tregim', color: 'bg-orange-100 border-orange-300' },
+  { time: '7:30',  emoji: '🌅', title: 'Mirëseardhja e Mëngjesit', desc: 'Përshëndetje, pranim, rreth mëngjesi dhe tregim', color: 'bg-violet-100 border-violet-300' },
   { time: '8:30',  emoji: '📚', title: 'Aktivitete Mësimore',      desc: 'Mësim i strukturuar: lexim, matematikë & projekte grupore', color: 'bg-blue-100 border-blue-300' },
   { time: '10:00', emoji: '🥛', title: 'Rostiçeri Mëngjesi',       desc: 'Rostiçeri organike e shëndetshme dhe pushim hidratimi', color: 'bg-green-100 border-green-300' },
   { time: '10:30', emoji: '🎨', title: 'Sesion Kreativ',           desc: 'Art, muzikë, dramë dhe lojë e lirë imagjinative', color: 'bg-purple-100 border-purple-300' },

@@ -7,7 +7,7 @@ import CTABanner from '../sections/CTABanner';
 export default function Services() {
   return (
     <motion.div {...pageTransition}>
-      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#E8F4FD,#EDE9FE)' }}>
+      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#EDE9FE,#F5F3FF,#E0E7FF)' }}>
         <div className="container-max px-4 mx-auto">
           <span className="section-label">Shërbimet</span>
           <h1 className="section-title mt-2 mb-4">Gjithçka që Fëmija Juaj <span className="text-primary">Ka Nevojë</span></h1>

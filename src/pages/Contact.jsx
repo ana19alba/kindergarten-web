@@ -57,7 +57,7 @@ export default function Contact() {
   return (
     <motion.div {...pageTransition}>
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#E8F4FD,#FFF0E6)' }}>
+      <section className="pt-32 pb-16 text-center" style={{ background:'linear-gradient(135deg,#EDE9FE,#F5F3FF,#E0E7FF)' }}>
         <div className="container-max px-4 mx-auto">
           <span className="section-label">Na Kontakto</span>
           <h1 className="section-title mt-2 mb-4">Do të <span className="text-primary">Dëgjonim</span> me Kënaqësi</h1>
